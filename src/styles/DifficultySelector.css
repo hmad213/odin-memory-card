@@ -1,43 +1,43 @@
-.difficulty-selector{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+.difficulty-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
 }
 
-.difficulty-container{
-    display: flex;
-    gap: 20px;
+.difficulty-container {
+  display: flex;
+  gap: 20px;
 }
 
-.difficulty-container button{
-    width: 100px;
-    font-family: inherit;
-    padding: 10px 0px;
-    border-radius: 10px;
-    color: white;
+.difficulty-container button {
+  width: 100px;
+  font-family: inherit;
+  padding: 10px 0px;
+  border-radius: 10px;
+  color: white;
 }
 
-.easy{
-    background-color: #228B22;
+.easy {
+  background-color: #228b22;
 }
 
-.easy:hover{
-    background-color: rgb(76, 160, 76);
+.easy:hover {
+  background-color: rgb(76, 160, 76);
 }
 
-.medium{
-    background-color: #FFC72C;
+.medium {
+  background-color: #ffc72c;
 }
 
-.medium:hover{
-    background-color: #ffd561;
+.medium:hover {
+  background-color: #ffd561;
 }
 
-.hard{
-    background-color: #8B0000;
+.hard {
+  background-color: #8b0000;
 }
 
-.hard:hover{
-    background-color: #ad0000;
+.hard:hover {
+  background-color: #ad0000;
 }

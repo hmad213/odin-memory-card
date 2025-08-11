@@ -1,16 +1,16 @@
-.card{
-    min-width: 150px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid black;
-    min-height: 200px;
-    justify-content: center;
-    gap: 40px;
-    padding-top: 30px;
-    cursor: pointer;
+.card {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  min-height: 200px;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 30px;
+  cursor: pointer;
 }
 
-.card img{
-    width: 150px;
+.card img {
+  width: 150px;
 }

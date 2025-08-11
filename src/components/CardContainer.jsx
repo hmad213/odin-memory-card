@@ -1,18 +1,39 @@
 import Card from "./card.jsx";
-import "../styles/CardContainer.css"
+import "../styles/CardContainer.css";
+import { useMemo } from "react";
 
-export default function CardContainer({ pokemon, selectedPokemon, setSelectedPokemon, setGameOver }){
-    let pokemonCopy = pokemon;
-    for (let i = pokemonCopy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [pokemonCopy[i], pokemonCopy[j]] = [pokemonCopy[j], pokemonCopy[i]]; 
-    }
+function shuffleArray(arr) {
+  let copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
-    return(
-        <div className="card-container">
-            {pokemonCopy.map((entity, index) => 
-                <Card url={entity.url} name={entity.name} myKey={entity.id} key={index} selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} setGameOver={setGameOver}/>
-            )}
-        </div>
-    )
+export default function CardContainer({
+  pokemon,
+  selectedPokemon,
+  setSelectedPokemon,
+  setGameOver,
+}) {
+  let pokemonCopy = useMemo(() => {
+    return shuffleArray(pokemon);
+  }, [selectedPokemon]);
+
+  return (
+    <div className="card-container">
+      {pokemonCopy.map((entity) => (
+        <Card
+          url={entity.url}
+          name={entity.name}
+          myKey={entity.id}
+          key={entity.id}
+          selectedPokemon={selectedPokemon}
+          setSelectedPokemon={setSelectedPokemon}
+          setGameOver={setGameOver}
+        />
+      ))}
+    </div>
+  );
 }

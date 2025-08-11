@@ -1,7 +1,7 @@
-.card-container{
-    display: flex;
-    gap: 40px;
-    width: 100vw;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-container {
+  display: flex;
+  gap: 40px;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
 }
