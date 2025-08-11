@@ -30,6 +30,15 @@ function App() {
   let [pokemon, setPokemon] = useState(null);
   let [difficulty, setDifficulty] = useState(null);
   let [selectedPokemon, setSelectedPokemon] = useState([]);
+  let [gameOver, setGameOver] = useState(false);
+
+  let score = selectedPokemon.length;
+  if(pokemon && score >= pokemon.length){
+    setGameOver(true);
+    setSelectedPokemon([]);
+  }
+  
+  console.log(selectedPokemon);
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -90,13 +99,12 @@ function App() {
     fetchPokemon();
   }, []);
 
-  console.log(pokemon);
-
   return (
     <>
       <h1>PokeCard</h1>
+      <h2>Score: {score}</h2>
       {!difficulty ? <DifficultySelector setDifficulty={setDifficulty}/> : (pokemon ? (
-        <CardContainer pokemon={pokemon}/>
+        <CardContainer pokemon={pokemon} selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} setGameOver={setGameOver}/>
       ) : (
         <p>Loading...</p>
       ))}
