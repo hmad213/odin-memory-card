@@ -13,7 +13,6 @@ export default function Card({
       setSelectedPokemon([...selectedPokemon, myKey]);
     } else {
       setGameOver(true);
-      setSelectedPokemon([]);
     }
   }
 

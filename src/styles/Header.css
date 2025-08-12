@@ -1,0 +1,17 @@
+header {
+  background-color: #ff3131;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  align-items: center;
+}
+
+header p {
+  font-size: 24px;
+}
+
+header h1 {
+  font-size: 38px;
+  font-family: "Sour Gummy", sans-serif;
+}

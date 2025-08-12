@@ -1,7 +1,17 @@
 #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  flex: 1;
+}
+
+main > p {
+  font-size: 28px;
 }
