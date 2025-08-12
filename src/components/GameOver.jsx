@@ -1,8 +1,10 @@
-export default function GameOver({ restartGame }) {
+import "../styles/GameOver.css"
+
+export default function GameOver({ restartGame, text }) {
   return (
-    <>
-      <h2>Game Over</h2>
+    <div className="game-over">
+      <h2>{text}</h2>
       <button onClick={restartGame}>Play Again</button>
-    </>
+    </div>
   );
 }

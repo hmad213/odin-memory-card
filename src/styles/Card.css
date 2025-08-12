@@ -6,11 +6,31 @@
   border: 1px solid black;
   min-height: 250px;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   padding-top: 30px;
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .card img {
   width: 150px;
+}
+
+.card h2{
+  font-weight: 400;
+}
+
+.card:hover{
+  animation: 0.5s card-hover;
+  transform: rotate(-5deg) scale(1.05);
+}
+
+@keyframes card-hover{
+  from{
+    transform: rotate(0deg) scale(1);
+  }
+
+  to{
+    transform: rotate(-5deg) scale(1.05);
+  }
 }

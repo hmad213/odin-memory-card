@@ -1,8 +1,13 @@
 .difficulty-selector {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  text-align: center;
+  gap: 40px;
+  align-items: center;
+  font-size: 32px;
+}
+
+.difficulty-selector h2{
+  font-weight: 400;
 }
 
 .difficulty-container {

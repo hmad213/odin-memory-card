@@ -80,7 +80,7 @@ function App() {
       <Header score={score} highScore={highScore} difficulty={difficulty} />
       <main>
         {gameOver ? (
-          <GameOver restartGame={restartGame} />
+          <GameOver restartGame={restartGame} text={score >= pokemon.length ? "You Win!" : "Game Over!"}/>
         ) : !difficulty ? (
           <DifficultySelector setDifficulty={setDifficulty} />
         ) : pokemon ? (
@@ -91,7 +91,7 @@ function App() {
             setGameOver={setGameOver}
           />
         ) : (
-          <p>Loading...</p>
+          <div class="loader"></div>
         )}
       </main>
     </>
