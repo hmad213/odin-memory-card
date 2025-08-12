@@ -1,4 +1,4 @@
-import Card from "./card.jsx";
+import Card from "./Card.jsx";
 import "../styles/CardContainer.css";
 import { useMemo } from "react";
 
